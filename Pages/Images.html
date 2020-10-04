@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <title>MRAA Exhibition Submissions</title>
+
+    <?!= include("Includes/page.css.inc"); ?>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Reawakening Submissions</h1>
+        <? for (let i = 0; i < assets.length; i++) { ?>
+
+        <div class="card mb-4" style="width:302px;">
+            <img src="<?= assets[i].url ?>" width="300vm"/>
+            <div class="card-body">
+                <h5 class="card-title"><?= assets[i].workTitle ?></h5>
+                <p class="card-text">Artist: <?= assets[i].artistName ?></p>
+                <p class="card-text"><?= assets[i].medium ?></p>
+                <p class="card-text"><?= assets[i].workDimensions ?></p>
+                <p class="card-text"><?= assets[i].price ?></p>
+            </div>
+        </div>
+
+        <? } ?>
+    </div>
+</body>
+
+</html>
